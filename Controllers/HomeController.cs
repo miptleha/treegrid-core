@@ -4,9 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TreeGridNode.Models;
 
-namespace TreeGridNode.Controllers
+namespace TreeGridCore.Controllers
 {
     public class HomeController : Controller
     {
