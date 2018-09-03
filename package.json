@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "treegrid-core",
+  "dependencies": {
+    "treegrid-js": "git+https://github.com/miptleha/treegrid-js.git"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "del": "3.0.0"
+  }
+}
