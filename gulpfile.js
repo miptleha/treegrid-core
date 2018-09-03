@@ -14,7 +14,8 @@ gulp.task('clean', function () {
     return del([targetPath + '/**/*']);
 });
 
-gulp.task('default', function () {
+gulp.task('default', function (done) {
     gulp.src(nodeRoot + "jquery/dist/jquery.js").pipe(gulp.dest(targetPath + "/jquery"));
     gulp.src(nodeRoot + "treegrid-js/js/*").pipe(gulp.dest(targetPath + "/treegrid-js"));
+    done();
 });
