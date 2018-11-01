@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "treegrid-core",
   "dependencies": {
-    "treegrid-js": "git+https://github.com/miptleha/treegrid-js.git"
+    "treegrid": "git+https://github.com/miptleha/treegrid-js.git"
   },
   "devDependencies": {
     "del": "3.0.0",

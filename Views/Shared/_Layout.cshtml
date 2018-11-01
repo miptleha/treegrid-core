@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TreeGridCore</title>
+    <title>@ViewBag.Title</title>
 
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
 </head>
@@ -11,8 +11,10 @@
 
 @RenderBody()
 
+<script src="~/lib/jquery/jquery.js" asp-append-version="true"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
 
 @RenderSection("Scripts", required: false)
+
 </body>
 </html>

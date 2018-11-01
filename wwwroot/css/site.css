@@ -1,1 +1,60 @@
-﻿
+﻿body {
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+input, select, textarea, button {
+    font-family: inherit;
+}
+
+#main {
+    position: relative;
+}
+
+#sidebar {
+    width: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#content {
+    margin-right: 250px;
+}
+
+#options label input, #options label span {
+    vertical-align: middle;
+}
+
+#grid1 {
+}
+
+#grid2, #grid3 {
+    width: 800px;
+    height: 240px;
+}
+
+#apply {
+    width: 100px;
+}
+
+.button {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #759dc0;
+    padding: 2px 4px 4px 4px;
+    color: #18335E;
+    background: #DFEFFC;
+    font-weight: bold;
+    text-align: center;
+
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+    .button:hover {
+        background: #d0e5f5;
+        color: #1d5987;
+    }

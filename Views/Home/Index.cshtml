@@ -1,1 +1,40 @@
-﻿<p>Use this area to provide additional information.</p>
+﻿@{
+    ViewBag.Title = "TreeGrid Samples";
+}
+<link rel="stylesheet" href="~/lib/treegrid/treegrid.css" asp-append-version="true" />
+
+<h1>@ViewBag.Title</h1>
+<div id="main">
+    <div id="sidebar">
+        <h2>Options</h2>
+        <div id="options">
+            <p><label><input type="checkbox" name="sort" checked /><span>Allow sort</span></label></p>
+            <p><label><input type="checkbox" name="sort_num_desc" checked /><span>Numeric columns sort desc first</span></label></p>
+            <p><label><input type="checkbox" name="dad_col" checked /><span>Drag and drop columns</span></label></p>
+            <p><label><input type="checkbox" name="resize_col" checked /><span>Resize columns</span></label></p>
+            <p><label><input type="checkbox" name="resize_tab" checked /><span>Resize table</span></label></p>
+            <p><label><input type="checkbox" name="titlebar" checked /><span>Display titlebar</span></label></p>
+            <p><label><input type="checkbox" name="hide_btn" checked /><span>Show/hide columns</span></label></p>
+            <p><label><input type="checkbox" name="min_btn" checked /><span>Minimize</span></label></p>
+            <p><label><input type="checkbox" name="max_btn" checked /><span>Maximize</span></label></p>
+        </div>
+        <button class="button" id="apply">Apply</button>
+    </div>
+    <div id="content">
+        <p><a href="~/Home/Xml?id=gdp&v=@(DateTime.Now.Ticks)" target="_blank">Sample 1</a>: Multi-row header, container size not set</p>
+        <div id="grid1"></div>
+        <p><a href="~/Home/Xml?id=employees&v=@(DateTime.Now.Ticks)" target="_blank">Sample 2</a>: Many records, many columns, text wrapping, scrolls</p>
+        <div id="grid2"></div>
+        <p><a href="~/Home/Xml?id=hierarchy&v=@(DateTime.Now.Ticks)" target="_blank">Sample 3</a>: Hierarchical data</p>
+        <div id="grid3"></div>
+    </div>
+</div>
+
+@section Scripts {
+<script src="~/lib/treegrid/treegrid.js" asp-append-version="true"></script>
+
+<script>
+    window.data_url = '@Url.Content("~/Home/Data")';
+    updateTables();
+</script>
+}

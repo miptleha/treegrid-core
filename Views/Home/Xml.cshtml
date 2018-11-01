@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "TreeGrid source";
+}
+@model TreeGridCore.Models.FileXml
+
+<h2>@ViewBag.Title (file from App_Data folder)</h2>
+
+<pre>
+@System.IO.File.ReadAllText(Model.Path)
+</pre>
+
