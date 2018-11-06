@@ -8,5 +8,5 @@ This project references javascript project on github. If you don't see grids whe
   <li>Wait 20 seconds for initializing modules (Visual Studio download all required files in node_modules folder)</li>
   <li>Start debugging, there will be error, stop debugging (hello Microsoft)</li>
   <li>Start debugging again (Visual Studio will run grunt task, that copies files to wwwroot)</li>
-  <li>If grid still not visible manualy run grunt task: from context menu on gruntfile.js in Visual Studio</li>
+  <li>If grid still not visible manualy run grunt task from context menu on gruntfile.js in Visual Studio</li>
 </ul>
