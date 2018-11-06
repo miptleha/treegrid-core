@@ -7,7 +7,7 @@ This project references javascript project on github. If you don't see grids whe
   <li>Open this project in Visual Studio</li>
   <li>Rebuild all (Visual Studio downloads all required npm modules)</li>
   <li>Close Visual Studio</li>
-  <li>Open project again</li>
+  <li>Open project in Visual Studio again</li>
   <li>Rebuild all (Visual Studio run grunt task, that copies files to wwwroot)</li>
   <li>Run project</li>
 </ul>
