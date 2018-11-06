@@ -2,7 +2,7 @@
 This is demo project on Visual Studio 2017 (ASP.NET Core) for [treegrid](https://github.com/miptleha/treegrid-js) component
 
 ## How to start
-This project references (javascript)[https://github.com/miptleha/treegrid-js] project on github. If you don't see grids when run project:
+This project references javascript project on github. If you don't see grids when run project:
 <ul>
   <li>Open project</li>
   <li>Rebuild all (Visual Studio downloads all required npm modules)</li>
