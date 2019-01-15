@@ -330,6 +330,7 @@ namespace TreeGridCore.Code.Table
 
         void ReadDataCsv(string content, TableContent d)
         {
+            CsvManager.TextTrim = true;
             var td = CsvManager.ReadCsvString(content);
             d.Schema.AddRange(td.Header);
             foreach (var r in td.Content)
