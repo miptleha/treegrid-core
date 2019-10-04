@@ -1,14 +1,13 @@
 # TreeGrid demo project
 This is demo project on Visual Studio 2017 (ASP.NET Core) for [treegrid](https://github.com/miptleha/treegrid-js) component
 
-## How to start
-This project references javascript project on github. If you don't see grids when run project:
-<ul>
-  <li>Open solution treegrid-core.sln in Visual Studio</li>
-  <li>Wait 20 seconds for initializing modules (Visual Studio download all required files in node_modules folder)</li>
-  <li>Start debugging, there will be error, stop debugging (hello Microsoft)</li>
-  <li>Start debugging again (Visual Studio will run gulp task, that copies files to wwwroot)</li>
-  <li>If grid still not visible manualy run gulp task from context menu on gulpfile.js in Visual Studio</li>
-</ul>
+## Download source code
+```
+git clone https://github.com/miptleha/treegrid-core.git
+```
 
-Do not do changes in wwwroot folder, after build in Visual Studio your changes disapear (gulp overwrite files from node_modules folder). Modify files in node_modules/treegrid or comment tasks in gulpfile.js.
+## How to run
+* Open the treegrid-core.sln file in Visual Studio. 
+* Wait for all npm packages in the Dependencies folder to load. 
+* Start debugging in IIS Express. Initially, the component will not be displayed (the gulpfile.js not run). 
+* Stop debugging and start again. Now the component will be displayed and worked correctly.
