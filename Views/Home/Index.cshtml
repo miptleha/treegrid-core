@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "TreeGrid Samples";
 }
-<link rel="stylesheet" href="~/lib/treegrid/treegrid.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/node_modules/treegrid/src/treegrid.css" asp-append-version="true" />
 
 <h1>@ViewBag.Title</h1>
 <div id="main">
@@ -31,7 +31,7 @@
 </div>
 
 @section Scripts {
-<script src="~/lib/treegrid/treegrid.js" asp-append-version="true"></script>
+<script src="~/node_modules/treegrid/src/treegrid.js" asp-append-version="true"></script>
 
 <script>
     window.data_url = '@Url.Content("~/Home/Data")';

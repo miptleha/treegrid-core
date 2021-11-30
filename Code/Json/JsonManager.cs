@@ -1,10 +1,10 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace TreeGridCore.Code.Json
@@ -17,43 +17,43 @@ namespace TreeGridCore.Code.Json
                 return null;
 
             object res = null;
-            using (var fs = File.OpenRead(path))
+            using (var sw = new StreamReader(path))
             {
-                res = ReadJson(fs);
+                var json = sw.ReadToEnd();
+                res = ReadJson(json);
             }
             return res;
         }
 
-        public static List<Dictionary<string, object>> ReadJson(Stream s)
+        public class ObjectToInferredTypesConverter : JsonConverter<object>
         {
-            List<Dictionary<string, object>> res = null;
-            var serializer = new JsonSerializer();
-            using (var sr = new StreamReader(s))
-            {
-                using (var jsonTextReader = new JsonTextReader(sr))
+            public override object Read(
+                ref Utf8JsonReader reader,
+                Type typeToConvert,
+                JsonSerializerOptions options) => reader.TokenType switch
                 {
-                    res = serializer.Deserialize<List<Dictionary<string, object>>>(jsonTextReader);
-                }
-            }
-            return res;
+                    JsonTokenType.True => true,
+                    JsonTokenType.False => false,
+                    JsonTokenType.Number when reader.TryGetInt64(out long l) => l,
+                    JsonTokenType.Number => reader.GetDouble(),
+                    JsonTokenType.String when reader.TryGetDateTime(out DateTime datetime) => datetime,
+                    JsonTokenType.String => reader.GetString(),
+                    _ => JsonDocument.ParseValue(ref reader).RootElement.Clone()
+                };
+
+            public override void Write(
+                Utf8JsonWriter writer,
+                object objectToWrite,
+                JsonSerializerOptions options) =>
+                JsonSerializer.Serialize(writer, objectToWrite, objectToWrite.GetType(), options);
         }
 
-        public static List<Dictionary<string, object>> ReadJsonString(string content)
+        public static List<Dictionary<string, object>> ReadJsonString(string json)
         {
-            using (var st = GenerateStreamFromString(content))
-            {
-                return ReadJson(st);
-            }
-        }
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new ObjectToInferredTypesConverter());
 
-        public static Stream GenerateStreamFromString(string s)
-        {
-            var stream = new MemoryStream();
-            var writer = new StreamWriter(stream);
-            writer.Write(s);
-            writer.Flush();
-            stream.Position = 0;
-            return stream;
+            return JsonSerializer.Deserialize<List<Dictionary<string, object>>>(json, options);
         }
     }
 }

@@ -8,5 +8,12 @@ namespace TreeGridCore.Models
     public class FileXml
     {
         public string Path { get; set; }
+        public string ShortPath
+        {
+            get
+            {
+                return System.IO.Path.GetFileName(Path);
+            }
+        }
     }
 }

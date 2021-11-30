@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "treegrid-core", "treegrid-core.csproj", "{2A93C6FB-9613-4F28-A0B7-966DE81C7402}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "treegrid-core", "treegrid-core.csproj", "{8EF6F258-006B-488A-8728-7687FF8350FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A93C6FB-9613-4F28-A0B7-966DE81C7402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A93C6FB-9613-4F28-A0B7-966DE81C7402}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A93C6FB-9613-4F28-A0B7-966DE81C7402}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A93C6FB-9613-4F28-A0B7-966DE81C7402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF6F258-006B-488A-8728-7687FF8350FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF6F258-006B-488A-8728-7687FF8350FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF6F258-006B-488A-8728-7687FF8350FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF6F258-006B-488A-8728-7687FF8350FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {042A376F-353E-4EEC-9DF7-BE1BDB83F61E}
+		SolutionGuid = {B4FC4977-E2EF-4B40-AAB6-370545387B97}
 	EndGlobalSection
 EndGlobal

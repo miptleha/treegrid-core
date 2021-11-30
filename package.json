@@ -1,11 +1,23 @@
 {
-  "version": "1.0.0",
   "name": "treegrid-core",
+  "description": "Backend part of the treegrid-js control on ASP.NET Core MVC",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miptleha/treegrid-core.git"
+  },
+  "keywords": [
+    "asp.net",
+    "backend",
+    "c#"
+  ],
+  "author": "miptleha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miptleha/treegrid-core/issues"
+  },
+  "homepage": "https://github.com/miptleha/treegrid-core",
   "dependencies": {
     "treegrid": "git+https://github.com/miptleha/treegrid-js.git"
-  },
-  "devDependencies": {
-    "del": "3.0.0",
-    "gulp": "^4.0.0"
   }
 }
