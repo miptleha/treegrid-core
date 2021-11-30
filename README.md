@@ -18,6 +18,6 @@ Treegrid component is installed as NPM module (dependencies in [package.json](pa
 
 ## How to run
 * Open the treegrid-core.sln file in Visual Studio
-* In Dependencies right click on npm and select 'Restore packages'
+* Right click on package.json and select 'Restore Packages'
 * Frontent component and jquery will be uploaded in node_modules folder
 * Run application
