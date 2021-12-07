@@ -5,8 +5,4 @@
     <RootNamespace>treegrid_core</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
-
 </Project>
