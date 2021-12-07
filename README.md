@@ -2,7 +2,7 @@ _Please refer to 'How to run' section if get DirectoryNotFoundException_
 
 # TreeGrid demo project
 This is demo project on ASP.NET Core for [treegrid](https://github.com/miptleha/treegrid-js) component.   
-Install Visual Studio to run project ([free](https://visualstudio.microsoft.com/en/vs/community/) version).   
+Install [Visual Studio 2019 Community](https://docs.microsoft.com/en-us/visualstudio/releases/2019/history) (haven't tried compiling and running in new Visual Studio).   
 
 Now for Visual Studio 2019 and .NET 5.   
 New version is without gulp file.   
